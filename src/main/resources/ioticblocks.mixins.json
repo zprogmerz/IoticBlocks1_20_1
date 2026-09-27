@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "gay.object.ioticblocks.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "actions.MixinOpTheCoolerRead",
+    "actions.MixinOpTheCoolerReadable",
+    "actions.MixinOpTheCoolerWritable",
+    "actions.MixinOpTheCoolerWrite"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

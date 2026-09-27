@@ -3,7 +3,11 @@ plugins {
     id("maven-publish")
     id("net.neoforged.moddev").version("2.0.141")
     id("idea")
+    id("org.jetbrains.kotlin.jvm") version "2.2.20"
+    //kotlin("jvm") version "2.2.20"
 }
+
+val kotlinForForgeVersion = providers.gradleProperty("kotlin_for_forge_version").get()
 
 object ModConfig {
     const val MINECRAFT_VERSION = "1.21.1"
@@ -13,17 +17,17 @@ object ModConfig {
     const val PARCHMENT_MAPPING_VERSION = "2024.11.17"
     const val LOADER_VERSION_RANGE = "[1,)"
 
-    const val MOD_ID = "examplemod"
-    const val MOD_NAME = "Example Mod"
+    const val MOD_ID = "ioticblocks"
+    const val MOD_NAME = "IoticBlocks"
     const val MOD_LICENSE = "MIT"
-    const val MOD_VERSION = "2.6.0"
-    const val MOD_GROUP_ID = "io.github.mochi_753.examplemod"
-    const val MOD_DISPLAY_URL = "https://github.com/mochi-753/MDK-1.21.1-ModDevGradle"
-    const val MOD_AUTHORS = "Mochi753"
-    const val MOD_DESCRIPTION = "EXAMPLE MOD"
+    const val MOD_VERSION = "1.1.0"
+    const val MOD_GROUP_ID = "io.github.zprogmerz.ioticblocksfork"
+    const val MOD_DISPLAY_URL = "https://github.com/zprogmerz/IoticBlocks1_20_1"
+    const val MOD_AUTHORS = "object-Object"
+    const val MOD_DESCRIPTION = "Fork IoticBlocks for 1.21.1"
 
-    const val CURSEFORGE_PROJECT_ID = "1576170"
-    const val MODRINTH_PROJECT_ID = "MOXi22S6"
+    const val CURSEFORGE_PROJECT_ID = ""
+    const val MODRINTH_PROJECT_ID = ""
 }
 
 tasks.named<Wrapper>("wrapper").configure {
@@ -41,6 +45,10 @@ sourceSets.main.get().resources {
 repositories {
     mavenCentral()
 
+    maven {
+        name = "Kotlin for Forge"
+        url = uri("https://thedarkcolour.github.io/KotlinForForge/")
+    }
     /*
     exclusiveContent {
         forRepository {
@@ -152,6 +160,15 @@ configurations {
 }
 
 dependencies {
+
+    implementation("thedarkcolour:kotlinforforge-neoforge:$kotlinForForgeVersion")
+
+    implementation(fileTree("libs") { include("*.jar") })
+    constraints {
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0") {
+            because("1.9.0 crashes the K2 compiler with 'source must not be null'")
+        }
+    }
 }
 
 val generateModMetadata = tasks.register<ProcessResources>("generateModMetadata") {
@@ -172,8 +189,14 @@ val generateModMetadata = tasks.register<ProcessResources>("generateModMetadata"
     inputs.properties(replaceProperties)
 
     expand(replaceProperties)
-    from("src/main/templates")
+
+    from("src/main/templates") {
+        include("META-INF/neoforge.mods.toml")
+        include("pack.mcmeta")
+    }
     into("build/generated/sources/modMetadata")
+
+
 }
 
 sourceSets.main {
