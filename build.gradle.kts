@@ -80,7 +80,7 @@ repositories {
 
 base {
     @Suppress("MISSING_DEPENDENCY_SUPERCLASS_IN_TYPE_ARGUMENT")
-    archivesName.set(ModConfig.MOD_NAME.replace(' ', '-'))
+    archivesName.set(ModConfig.MOD_NAME.replace(' ', '-')+"-neoforge-${ModConfig.MINECRAFT_VERSION}")
 }
 
 java {
