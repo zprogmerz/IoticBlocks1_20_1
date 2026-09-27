@@ -12,5 +12,9 @@
   "ioticblocks.category.patterns.entry.readwrite_blocks.page.readable/block": "Like $(l:patterns/readwrite#hexcasting:readable)$(action)Auditor's Reflection/$, but the readability of a block is checked instead of my other hand.",
   "ioticblocks.category.patterns.entry.readwrite_blocks.page.writable/block": "Like $(l:patterns/readwrite#hexcasting:writable)$(action)Assessor's Reflection/$, but the writability of a block is checked instead of my other hand.",
   "ioticblocks.category.patterns.entry.readwrite_blocks.page.write/block": "Like $(l:patterns/readwrite#hexcasting:write)$(action)Scribe's Gambit/$, but the iota is written to a block instead of my other hand.$(br2)\r\n                Interestingly enough, it looks like I cannot write my own Name using this spell. I get a sense that I might be endangered if I could.",
-  "ioticblocks.category.patterns.entry.readwrite_blocks.page.write/index": "Read a list iota out of an entity or block, then set the element at the specified index of that list to the given iota, then write the resulting list back to the entity or block."
+  "ioticblocks.category.patterns.entry.readwrite_blocks.page.write/index": "Read a list iota out of an entity or block, then set the element at the specified index of that list to the given iota, then write the resulting list back to the entity or block.",
+  "ioticblocks.mishap.void_read": "Infinity is not the limit",
+  "ioticblocks.mishap.void_read.rare": "404: Block not found",
+  "ioticblocks.mishap.void_read.rare2": "The void stares back"
+
 }

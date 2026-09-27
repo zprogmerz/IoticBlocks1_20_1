@@ -12,5 +12,7 @@
   "ioticblocks.category.patterns.entry.readwrite_blocks.page.readable/block": "与$(l:patterns/readwrite#hexcasting:readable)$(action)审计员之精思/$类似，但会检验方块的是否可读取，而非检验我另一只手中的物品。",
   "ioticblocks.category.patterns.entry.readwrite_blocks.page.writable/block": "与$(l:patterns/readwrite#hexcasting:writable)$(action)估价员之精思/$类似，但会检验方块的是否可写入，而非检验我另一只手中的物品。",
   "ioticblocks.category.patterns.entry.readwrite_blocks.page.write/block": "与$(l:patterns/readwrite#hexcasting:write)$(action)书吏之策略/$类似，但会向方块写入 iota，而非向我另一只手中的物品写入。$(br2)\r\n                有趣的是，我似乎无法用这个法术写入我的真名。我有种感觉，如果我真可以这么做，等着我的只会是灾难。",
-  "ioticblocks.category.patterns.entry.readwrite_blocks.page.write/index": "从实体或方块中读出一个列表 iota，并将该列表中给定下标处的元素修改为所给 iota，最后把修改后的列表写入原实体或方块。"
+  "ioticblocks.category.patterns.entry.readwrite_blocks.page.write/index": "从实体或方块中读出一个列表 iota，并将该列表中给定下标处的元素修改为所给 iota，最后把修改后的列表写入原实体或方块。",
+  "ioticblocks.mishap.void_read": "无限并非极限",
+  "ioticblocks.mishap.void_read.rare": "这里什么都没有。连无限也没有。"
 }

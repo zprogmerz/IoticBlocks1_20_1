@@ -12,5 +12,8 @@
   "ioticblocks.category.patterns.entry.readwrite_blocks.page.readable/block": "Похоже на $(l:patterns/readwrite#hexcasting:readable)$(action)Отражение Ревизора/$, но на чтение проверяется блок вместо моей второй руки.",
   "ioticblocks.category.patterns.entry.readwrite_blocks.page.writable/block": "Похоже на $(l:patterns/readwrite#hexcasting:writable)$(action)Отражение Заседателя/$, но на запись проверяется блок вместо моей второй руки.",
   "ioticblocks.category.patterns.entry.readwrite_blocks.page.write/block": "Похоже на $(l:patterns/readwrite#hexcasting:write)$(action)Гамбит Писаря/$, но йота записывается в блок вместо моей второй руки.$(br2)\r\n                Интересно то, что я не могу записать моё собственное Имя этой руной. У меня чувство, что я был бы в опасности, будь это не так.",
-  "ioticblocks.category.patterns.entry.readwrite_blocks.page.write/index": "Читает йоту списка с сущности или блока, затем заменяет элемент прочитанного списка по указанному индексу на данную йоту, и в конце пишет итоговый список обратно в сущность или блок."
+  "ioticblocks.category.patterns.entry.readwrite_blocks.page.write/index": "Читает йоту списка с сущности или блока, затем заменяет элемент прочитанного списка по указанному индексу на данную йоту, и в конце пишет итоговый список обратно в сущность или блок.",
+  "ioticblocks.mishap.void_read": "Бесконечность не предел",
+  "ioticblocks.mishap.void_read.rare": "Ошибка 404: Блок не найден",
+  "ioticblocks.mishap.void_read.rare2": "Пустота смотрит в ответ"
 }

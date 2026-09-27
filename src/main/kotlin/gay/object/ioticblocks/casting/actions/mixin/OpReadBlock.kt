@@ -6,6 +6,8 @@ import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.mishaps.MishapBadBlock
 import at.petrak.hexcasting.common.casting.actions.rw.OpTheCoolerRead
 import gay.`object`.ioticblocks.api.IoticBlocksAPI
+import gay.`object`.ioticblocks.casting.mishaps.MishapVoidRead
+import net.minecraft.world.level.block.Blocks
 
 object OpReadBlock {
     val argc: Int by OpTheCoolerRead::argc
@@ -14,6 +16,10 @@ object OpReadBlock {
     fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
         val target = args.getBlockPos(0, argc)
         env.assertPosInRange(target)
+
+        if (env.world.getBlockState(target).`is`(Blocks.VOID_AIR)) {
+            throw MishapVoidRead()
+        }
 
         val datumHolder = IoticBlocksAPI.INSTANCE.findIotaHolder(env.world, target)
             ?: throw MishapBadBlock.of(target, "iota.read")
