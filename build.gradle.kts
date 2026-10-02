@@ -3,7 +3,7 @@ plugins {
     id("maven-publish")
     id("net.neoforged.moddev").version("2.0.141")
     id("idea")
-    id("org.jetbrains.kotlin.jvm") version "2.2.20"
+    id("org.jetbrains.kotlin.jvm") version "2.4.20"
     //kotlin("jvm") version "2.2.20"
 }
 
