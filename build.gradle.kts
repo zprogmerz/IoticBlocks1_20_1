@@ -165,7 +165,7 @@ dependencies {
 
     implementation(fileTree("libs") { include("*.jar") })
     constraints {
-        implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0") {
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.11.0") {
             because("1.9.0 crashes the K2 compiler with 'source must not be null'")
         }
     }
